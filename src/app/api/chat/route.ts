@@ -19,13 +19,15 @@ export async function POST(req: NextRequest) {
 
   // 현재 날짜와 시간 정보 추가 (KST 기준)
   const now = new Date();
-  const year = now.getFullYear();
-  const month = now.getMonth() + 1;
-  const day = now.getDate();
-  const dayOfWeek = ["일", "월", "화", "수", "목", "금", "토"][now.getDay()];
-  const hours = now.getHours().toString().padStart(2, '0');
-  const minutes = now.getMinutes().toString().padStart(2, '0');
-  const seconds = now.getSeconds().toString().padStart(2, '0');
+  // 한국 시간대로 변환 (UTC+9)
+  const kstTime = new Date(now.getTime() + (9 * 60 * 60 * 1000));
+  const year = kstTime.getUTCFullYear();
+  const month = kstTime.getUTCMonth() + 1;
+  const day = kstTime.getUTCDate();
+  const dayOfWeek = ["일", "월", "화", "수", "목", "금", "토"][kstTime.getUTCDay()];
+  const hours = kstTime.getUTCHours().toString().padStart(2, '0');
+  const minutes = kstTime.getUTCMinutes().toString().padStart(2, '0');
+  const seconds = kstTime.getUTCSeconds().toString().padStart(2, '0');
   const currentDateInfo = `오늘은 ${year}년 ${month}월 ${day}일 ${dayOfWeek}요일이고, 현재 시간은 ${hours}:${minutes}:${seconds}야. 이 정보를 기준으로 답변해.`;
 
   const SYSTEM_PROMPT = `${currentDateInfo}\n\n${SYSTEM_PROMPT_BASE}`;
