@@ -1,11 +1,46 @@
+const CACHE_NAME = 'gemmini-v1.0';
+const urlsToCache = [
+  '/',
+  '/manifest.json',
+  '/icon-192x192.png',
+  '/icon-512x512.png'
+];
+
 self.addEventListener('install', function (event) {
-  self.skipWaiting();
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function (cache) {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
+      })
+      .then(() => self.skipWaiting())
+  );
 });
 
 self.addEventListener('activate', function (event) {
-  event.waitUntil(self.clients.claim());
+  event.waitUntil(
+    caches.keys().then(function (cacheNames) {
+      return Promise.all(
+        cacheNames.map(function (cacheName) {
+          if (cacheName !== CACHE_NAME) {
+            console.log('Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(() => self.clients.claim())
+  );
 });
 
 self.addEventListener('fetch', function (event) {
-  // 기본적으로 네트워크 우선, 추후 필요시 캐싱 전략 추가 가능
+  event.respondWith(
+    caches.match(event.request)
+      .then(function (response) {
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
 }); 
