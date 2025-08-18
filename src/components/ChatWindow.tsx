@@ -181,9 +181,9 @@ const ChatWindow: React.FC<ChatWindowProps> = ({
           </div>
         </div>
         <div className="mt-4 text-gray-400 text-sm text-center">
-          Gemmini와 친근하게 대화해보세요!
+          잼미나이와 친구가 되어주세요!! 
           <br />
-          @Gemmini V1.0
+          @Gemmini v1.0
         </div>
       </div>
     </>
