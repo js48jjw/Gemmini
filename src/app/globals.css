@@ -243,3 +243,11 @@ input, button {
     display: none !important;
   }
 }
+
+/* 프로모션 배너 이미지 기본 스타일 (안전 가드) */
+.left-promo-banner img,
+.right-promo-banner img {
+  display: block;
+  width: 160px;
+  height: auto;
+}
