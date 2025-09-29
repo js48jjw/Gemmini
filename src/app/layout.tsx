@@ -98,7 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Script src="//t1.daumcdn.net/kas/static/ba.min.js" strategy="afterInteractive" />
           {/* 우측 프로모션 배너 (PC 전용) */}
           <a
-            href="https://xz84rgb87c.sens.kr"
+            href="https://ui7gwmf8ww.sens.kr"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -108,7 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }}
             className="right-promo-banner"
           >
-            <img src="/malen365.png" alt="우측 프로모션 배너" style={{ width: 160, height: 'auto' }} />
+            <img src="/magabogam.png" alt="우측 프로모션 배너" style={{ width: 160, height: 'auto' }} />
           </a>
         </div>
         {/* 메인 컨텐츠 */}
