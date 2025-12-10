@@ -61,20 +61,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             data-ad-height="600"
           ></ins>
           <Script src="//t1.daumcdn.net/kas/static/ba.min.js" strategy="afterInteractive" />
-          {/* 좌측 프로모션 배너 (PC 전용) */}
-          <a
-            href="https://ui7gwmf8ww.sens.kr"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'block',
-              width: 160,
-              marginTop: 12,
-            }}
-            className="left-promo-banner"
-          >
-            <img src="/magabogam.png" alt="좌측 프로모션 배너" style={{ width: 160, height: 'auto' }} />
-          </a>
         </div>
         {/* 우측 고정 광고 */}
         <div className="ad-container" style={{
@@ -96,20 +82,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             data-ad-height="600"
           ></ins>
           <Script src="//t1.daumcdn.net/kas/static/ba.min.js" strategy="afterInteractive" />
-          {/* 우측 프로모션 배너 (PC 전용) */}
-          <a
-            href="https://ui7gwmf8ww.sens.kr"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'block',
-              width: 160,
-              marginTop: 12,
-            }}
-            className="right-promo-banner"
-          >
-            <img src="/magabogam.png" alt="우측 프로모션 배너" style={{ width: 160, height: 'auto' }} />
-          </a>
         </div>
         {/* 메인 컨텐츠 */}
         {children}
