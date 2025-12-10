@@ -154,7 +154,6 @@ input, button {
 @layer base {
   * {
     border-color: var(--border);
-    outline-color: color-mix(in oklch, var(--ring) 50%, transparent);
   }
   body {
     background-color: var(--background);
