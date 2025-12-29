@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="ad-container" style={{
           position: 'fixed',
           left: 9,
-          top: 30,
+          top: 50,
           height: '100vh',
           width: 160,
           display: 'flex',
@@ -66,7 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="ad-container" style={{
           position: 'fixed',
           right: 16,
-          top: 30,
+          top: 50,
           height: '100vh',
           width: 160,
           display: 'flex',
