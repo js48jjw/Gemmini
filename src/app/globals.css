@@ -1,86 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-@import "tw-animate-css";
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', Arial, sans-serif;
-  background: #f8fafc;
-  color: #222;
-  min-height: 100vh;
-  transition: background 0.4s, color 0.4s;
-  font-size: 18px; /* 기본 폰트 크기 상향 */
-}
-
-@media (max-width: 640px) {
-  body {
-    font-size: 17px; /* 모바일에서도 충분히 크게 */
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    font-size: 20px; /* 데스크탑에서 더 크게 */
-  }
-}
-
-h1, .text-3xl, .text-4xl, .text-5xl, .text-6xl {
-  font-size: 2.2rem !important;
-}
-@media (min-width: 640px) {
-  h1, .text-3xl, .text-4xl, .text-5xl, .text-6xl {
-    font-size: 2.8rem !important;
-  }
-}
-@media (min-width: 1024px) {
-  h1, .text-3xl, .text-4xl, .text-5xl, .text-6xl {
-    font-size: 3.2rem !important;
-  }
-}
-
-label, .text-lg, .text-xl, .text-2xl {
-  font-size: 1.3rem !important;
-}
-@media (min-width: 640px) {
-  label, .text-lg, .text-xl, .text-2xl {
-    font-size: 1.5rem !important;
-  }
-}
-@media (min-width: 1024px) {
-  label, .text-lg, .text-xl, .text-2xl {
-    font-size: 1.7rem !important;
-  }
-}
-
-input, button {
-  font-size: 1.2rem !important;
-}
-
-.animate-fade-in {
-  animation: fade-in 0.7s cubic-bezier(0.4,0,0.2,1);
-}
-@keyframes fade-in {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: none; }
-}
-
-/* confetti 애니메이션용 (GameResult) */
-.confetti {
-  will-change: transform, opacity;
-}
-
-/* 버튼, 입력 등 공통 스타일 개선 */
-input, button {
-  outline: none;
-  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
-}
-
-::-webkit-input-placeholder { color: #b0b8c1; opacity: 1; }
-::-moz-placeholder { color: #b0b8c1; opacity: 1; }
-:-ms-input-placeholder { color: #b0b8c1; opacity: 1; }
-::placeholder { color: #b0b8c1; opacity: 1; }
 
 :root {
   --radius: 0.625rem;
@@ -160,6 +78,85 @@ input, button {
     color: var(--foreground);
   }
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', Arial, sans-serif;
+  background: #f8fafc;
+  color: #222;
+  min-height: 100vh;
+  transition: background 0.4s, color 0.4s;
+  font-size: 18px; /* 기본 폰트 크기 상향 */
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 17px; /* 모바일에서도 충분히 크게 */
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px; /* 데스크탑에서 더 크게 */
+  }
+}
+
+h1, .text-3xl, .text-4xl, .text-5xl, .text-6xl {
+  font-size: 2.2rem !important;
+}
+@media (min-width: 640px) {
+  h1, .text-3xl, .text-4xl, .text-5xl, .text-6xl {
+    font-size: 2.8rem !important;
+  }
+}
+@media (min-width: 1024px) {
+  h1, .text-3xl, .text-4xl, .text-5xl, .text-6xl {
+    font-size: 3.2rem !important;
+  }
+}
+
+label, .text-lg, .text-xl, .text-2xl {
+  font-size: 1.3rem !important;
+}
+@media (min-width: 640px) {
+  label, .text-lg, .text-xl, .text-2xl {
+    font-size: 1.5rem !important;
+  }
+}
+@media (min-width: 1024px) {
+  label, .text-lg, .text-xl, .text-2xl {
+    font-size: 1.7rem !important;
+  }
+}
+
+input, button {
+  font-size: 1.2rem !important;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* confetti 애니메이션용 (GameResult) */
+.confetti {
+  will-change: transform, opacity;
+}
+
+/* 버튼, 입력 등 공통 스타일 개선 */
+input, button {
+  outline: none;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+}
+
+::-webkit-input-placeholder { color: #b0b8c1; opacity: 1; }
+::-moz-placeholder { color: #b0b8c1; opacity: 1; }
+:-ms-input-placeholder { color: #b0b8c1; opacity: 1; }
+::placeholder { color: #b0b8c1; opacity: 1; }
 
 /* 입력값을 ●●●● 등으로 가리는 password-dot 클래스 */
 .password-dot {
