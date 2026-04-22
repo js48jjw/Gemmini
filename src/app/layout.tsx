@@ -67,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             data-ad-width="160"
             data-ad-height="600"
           ></ins>
-          <Script src="//t1.daumcdn.net/kas/static/ba.min.js" strategy="afterInteractive" />
+          <Script src="//t1.kakaocdn.net/kas/static/ba.min.js" strategy="afterInteractive" />
         </div>
         {/* 우측 고정 광고 */}
         <div className="ad-container" style={{
@@ -88,7 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             data-ad-width="160"
             data-ad-height="600"
           ></ins>
-          <Script src="//t1.daumcdn.net/kas/static/ba.min.js" strategy="afterInteractive" />
+          <Script src="//t1.kakaocdn.net/kas/static/ba.min.js" strategy="afterInteractive" />
         </div>
         {/* 메인 컨텐츠 */}
         {children}
